@@ -151,3 +151,11 @@ tip_amount = float((tip_percent*total_bill)/100)
 # total_with_tip = round((total_bill + tip_amount)/total_people, 2) | this does not give 0 at the second decimal
 total_with_tip = "{:.2f}".format((total_bill + tip_amount)/total_people) #convert into string
 print("Each person should pay: $" +str(total_with_tip))
+
+#                                                              Day3
+#                                 conditional statements, logical operators, code blocks and scope
+# syntax if-else statement
+if condition:
+   do this
+else:
+   do this
