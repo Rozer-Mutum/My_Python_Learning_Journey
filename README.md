@@ -321,3 +321,95 @@ see treasure_hunt.py
 #ascii_art
 https://ascii.co.uk/art
 Ctrl+F and search the desire ascii
+
+# Day 4
+#randomisation and python lists
+
+# Random Module
+https://en.wikipedia.org/wiki/Mersenne_Twister
+
+#pythonask
+https://www.askpython.com/python-modules/python-random-module-generate-random-numbers-sequences
+
+#modules are already written function where one can called and use it.
+#Random Number generation
+import random
+#generate any number between 1 and 10
+random_number = random.randint(1,10)
+print(f"{random_number}")
+
+#You are going to write a virtual coin toss program. It will randomly tell the user "Heads" or "Tails".
+#e.g. 1 means Heads 0 means Tails
+import random
+#generating 0 and 1 randomly
+random_number = random.randint(0, 1)
+#checking condition
+if (random_number==0):
+  print("Tails")
+else:
+  print("Heads")
+#To check output whether 0 or 1
+#print(f"{random_number}")
+
+# python lists/datastructure
+Way of organising and storing data
+
+#python.docs datastructure
+https://docs.python.org/3/tutorial/datastructures.html
+
+#sample fruit lists
+fruit_lists = ["lemon", "orange", "apple"]
+print(fruit_lists)
+print(fruit_lists[1])
+
+#You are going to write a program which will select a random name from a list of names. The person selected will have to pay for everybody's food bill.
+#Important: You are not allowed to use the choice() function.
+
+import random
+from unicodedata import name
+names_string = input("Give the names separated by , with a space.\n")
+#separating the input by ", " and making into a list
+names = names_string.split(", ")
+#counting the number of person
+number_of_person = len(names)
+#generating random integer from 0 to one less than the number of person
+random_number = random.randint(0, number_of_person-1)
+#assigning the random number to the list to get random names from the list
+person_paying_the_bill = names[random_number]
+print(f"{person_paying_the_bill} is going to buy the meal today!")
+
+import random
+names_string = input("Give the names separated by , with a space.\n")
+#separating the input by ", " and making into a list
+names = names_string.split(", ")
+#randomly pick names from the list
+random_name = random.choice(names)
+#print(names)
+print(f"{random_name} is going to buy the meal today!")
+
+#You are going to write a program which will mark a spot with an X.
+#column 2, row 3 would be entered as:
+#output
+['⬜️', '⬜️', '⬜️']
+['⬜️', '⬜️', '⬜️']
+['⬜️', 'X', '⬜️']
+
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+#nested list to easy replace inside list
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+#Taking user input to mark X
+changing_place = input("Enter the column and row you want to replace with X.\n")  #23
+#getting the column 
+column = int(changing_place[0])  #2
+row = int(changing_place[1])  #3
+#from nested list, particular row is obtained
+selected_row = map[row-1]  #map[3-1]               #map[row-1][column-1] = "X"
+#replacing the X to the desire column in that row  #
+selected_row[column-1] = "X"  #2-1                 #
+print(f"{row1}\n{row2}\n{row3}")
+
+# rock paper scissors game
+rock_paper_scissors.pyss
