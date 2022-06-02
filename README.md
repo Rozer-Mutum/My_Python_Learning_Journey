@@ -412,4 +412,4 @@ selected_row[column-1] = "X"  #2-1                 #
 print(f"{row1}\n{row2}\n{row3}")
 
 # rock paper scissors game
-rock_paper_scissors.pyss
+rock_paper_scissors.py
