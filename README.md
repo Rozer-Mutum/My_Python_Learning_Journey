@@ -413,3 +413,78 @@ print(f"{row1}\n{row2}\n{row3}")
 
 # rock paper scissors game
 rock_paper_scissors.py
+
+# Day 5
+# for loops, range and code blocks
+
+#You are going to write a program that calculates the average student height from a List of heights.
+#Average height rounded to the nearest whole number
+#Important You should not use the sum() or len() functions in your answer.
+
+#average height calculator
+print("Welcome to the average height calculator program!")
+heights_collect = input("Please enter the heights in metre separated by comma without spaces.\n")
+#making a list of input heights by separating with referece to comma
+height_lists = heights_collect.split(",")
+#Taking how many number of person from the list
+number_of_person = len(height_lists)
+height_add = 0
+#for loop in range
+for n in range (0, len(height_lists)):
+    height_add += int(height_lists[n])
+#average = (Total height)/(number of person)
+average = height_add/number_of_person
+print(round(average))
+
+#You are going to write a program that calculates the average student height from a List of heights.
+print("Welcome to finding highest number in list using for loop program!")
+numbers = input("Please enter the numbers separated by comma without spaces.\n").split(",")
+highest_number = 0
+for number in numbers:
+    if (int(number) > int(highest_number)):
+        highest_number = number
+print(f"The highest number is {highest_number}")
+
+#You are going to write a program that calculates the sum of all the even numbers from 1 to 100. Thus, the first even number would be 2 and the last one is 100:
+print("Adding all the even numbers from 1 to 100")
+total = 0
+for number in range(2, 101, 2):
+    total+=number
+print(f"The total of the even numbers is {total}")
+
+#You are going to write a program that automatically prints the solution to the FizzBuzz game.
+#divisible by 3 = fizz
+#divisible by 5 = buzz
+#both divisible by 3 and 5 = fizzbuzz
+
+print("Let's play FIZZBUZZ")
+for number in range(1, 101):
+    if (number%3==0 and number%5==0):
+        print("Fizzbuzz")
+    elif (number%3==0):
+        print("Fizz")
+    elif (number%5==0):
+        print("Buzz")
+    else:
+        print(number)
+
+#*******************
+#TIPS
+#how to shuffle a string
+#*******************
+from random import shuffle
+name = "game"
+l = list(name)
+shuffle(l)
+name = ''.join(l)
+print(name)
+#*******************
+#another approach
+#*******************
+import random
+name = "game"
+print(''.join(random.sample(name, len(name))))
+#******************
+
+#Password Generator Project
+pyPasswordGenerator.py file
