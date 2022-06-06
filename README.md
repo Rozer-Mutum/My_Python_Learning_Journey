@@ -488,3 +488,52 @@ print(''.join(random.sample(name, len(name))))
 
 #Password Generator Project
 pyPasswordGenerator.py file
+
+# Day 6
+# Functions, Code blocks and While groups
+
+#Function
+https://docs.python.org/3/library/functions.html
+
+#syntax
+def function_name():
+    print("Hello")
+    print("Everyone")
+function_name()
+
+#simple game
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Alone&url=worlds%2Ftutorial_en%2Falone.json
+
+#space vs tab
+https://peps.python.org/pep-0008/
+4 spaces should be given for indentation
+
+#while loop
+#syntax
+while something_is_true:
+    #Do this
+
+#hurdle4
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%204&url=worlds%2Ftutorial_en%2Fhurdle4.json
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    while right_is_clear()!=True:
+        if front_is_clear():
+                move()
+    turn_right()
+    if front_is_clear()==True:
+        move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+while not at_goal():
+    if front_is_clear()==True:
+        move()
+    elif wall_in_front()==True:
+        jump()
