@@ -537,3 +537,7 @@ while not at_goal():
         move()
     elif wall_in_front()==True:
         jump()
+
+# Day 7
+# Hangman Project
+Check the hangman folder
