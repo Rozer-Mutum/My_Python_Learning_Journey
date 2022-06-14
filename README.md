@@ -539,5 +539,54 @@ while not at_goal():
         jump()
 
 # Day 7
-# Hangman Project
+#Hangman Project
 Check the hangman folder
+
+# Day 8
+#Functions with input
+#Arguments and parameters
+
+#Simple function
+def greet():
+    print("Hello Everyone!\nHave a Good Day.")
+greet()
+
+#Function with input     || name = "Smith" (name-parameter ; "Smith"-argument)
+def greet_with_name(name):
+    print(f"Hello {name}!\nHave a Good Day {name}.")
+greet_with_name("Smith")
+
+#You are painting a wall. The instructions on the paint can says that 1 can of paint can cover 5 square meters of wall. Given a random height and width of wall, calculate how many cans of paint you'll need to buy.
+
+import math
+test_h=int(input("What is the height of the wall in meter? "))
+test_w=int(input("What is the width of the wall in meter? "))
+coverage=5
+def paint_calc(height, width, cover):
+
+    #number_of_can=round((height*width)/cover+.5) or
+    number_of_can=math.ceil((height*width)/cover)
+
+    print(f"The number of can is {number_of_can}")
+    
+#paint_calc(height=test_h, width=test_w, cover=coverage) or
+paint_calc(test_h, test_w, coverage)
+
+#Prime or not
+n=int(input("Enter the number to check prime or not.\n"))
+def prime_checker(number):
+    if number==1:
+        print("It's neither prime nor composite.")
+    else:
+        is_prime=True
+        for i in range(2,number):
+            if number%i==0:
+                is_prime=False
+        if is_prime:
+            print("It's a prime number.")
+        else:
+            print("It's not a prime number.")
+prime_checker(number=n)
+
+#Caesar Cipher
+caesar_cypher folder
