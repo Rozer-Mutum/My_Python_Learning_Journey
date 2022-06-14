@@ -1,59 +1,28 @@
-from base64 import encode
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+#Do NOT change the code above
+
+#TODO: Write the function that will allow new countries
+# #to be added to the travel_log. 👇
+def add_new_country(country_visited, visits_number, cities_visited):
+    new_dictionary = {}
+    new_dictionary["country"] = country_visited
+    new_dictionary["visits"] = visits_number
+    new_dictionary["cities"] = cities_visited
+    # print(new_dictionary)
+    travel_log.append(new_dictionary)
 
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-
-#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-def encrypt(sample_text, sample_shift):
-    cipher=""
-    for letter in sample_text:
-        position = alphabet.index(letter)
-        new_position = position+shift
-        new_letter = alphabet[new_position]
-        cipher += new_letter
-    print(f"The encode letter is {cipher}")
-
-
-    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
-    #e.g. 
-    #plain_text = "hello"
-    #shift = 5
-    #cipher_text = "mjqqt"
-    #print output: "The encoded text is mjqqt"
-
-    ##HINT: How do you get the index of an item in a list:
-    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
-
-    ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
-
-#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
-# encrypt(sample_text=text, sample_shift=shift)
-
-#TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
-def decrypt(encrypt_text, shift_number):
-    decode_letter = ""
-    for lettter in encrypt_text:
-        position = alphabet.index(lettter)
-        new_position = position - shift_number
-        new_letter = alphabet[new_position]
-        decode_letter += new_letter
-    print(f"The decode letter is {decode_letter}")
-
-  #TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by the shift amount and print the decrypted text.  
-  #e.g. 
-  #cipher_text = "mjqqt"
-  #shift = 5
-  #plain_text = "hello"
-  #print output: "The decoded text is hello"
-
-
-#TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-# encrypt(plain_text=text, shift_amount=shift)
-if direction=="encode":
-    encrypt(sample_text=text, sample_shift=shift)
-elif direction=="decode":
-    decrypt(encrypt_text=text, shift_number=shift)
+#Do not change the code below
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
